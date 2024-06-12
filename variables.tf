@@ -8,10 +8,6 @@ variable "ssh_keys" {
   type = string
 }
 
-variable "server_name" {
-  type = string
-}
-
 variable "image" {
   type = string
 }

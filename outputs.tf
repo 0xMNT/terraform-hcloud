@@ -1,7 +1,3 @@
-output "server_name" {
-  value = var.server_name
-}
-
 output "image" {
   value = var.image
 }
@@ -18,3 +14,10 @@ output "labels" {
   value = var.labels
 }
 
+output "node_ips" {
+  value = [for server in hcloud_server.node : server.ipv4_address]
+}
+
+output "node_names" {
+  value = [for server in hcloud_server.node : server.name]
+}
